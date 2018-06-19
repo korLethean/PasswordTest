@@ -65,28 +65,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Button button = (Button)view;
-                String buttonText = button.getText().toString();
 
-                if(buttonText.equals("1"))
-                    textPassword.setText(textPassword.getText() + "1");
-                else if(buttonText.equals("2"))
-                    textPassword.setText(textPassword.getText() + "2");
-                else if(buttonText.equals("3"))
-                    textPassword.setText(textPassword.getText() + "3");
-                else if(buttonText.equals("4"))
-                    textPassword.setText(textPassword.getText() + "4");
-                else if(buttonText.equals("5"))
-                    textPassword.setText(textPassword.getText() + "5");
-                else if(buttonText.equals("6"))
-                    textPassword.setText(textPassword.getText() + "6");
-                else if(buttonText.equals("7"))
-                    textPassword.setText(textPassword.getText() + "7");
-                else if(buttonText.equals("8"))
-                    textPassword.setText(textPassword.getText() + "8");
-                else if(buttonText.equals("9"))
-                    textPassword.setText(textPassword.getText() + "9");
-                else if(buttonText.equals("0"))
-                    textPassword.setText(textPassword.getText() + "0");
+                textPassword.setText(textPassword.getText().toString() + button.getText().toString());
             }
         };
         button1.setOnClickListener(buttonListener);
@@ -105,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 textPassword.setText("");
             }
         });
-
     }
 
     @Override
@@ -115,4 +94,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void screenReset() {
+        if(textPassword.getText().length() == 4) {
+            int x, y;
+            textPassword.setText("");
+        }
+    }
 }
