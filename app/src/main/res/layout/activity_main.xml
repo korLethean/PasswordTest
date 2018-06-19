@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Password: "
+            android:text="Password: "
             android:id="@+id/text_password"
             android:layout_alignParentTop="true"/>
 
@@ -25,12 +25,19 @@
             android:id="@+id/text_output"
             android:layout_toEndOf="@id/text_password"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="input your password"
+            android:id="@+id/text_result"
+            android:layout_below="@id/text_password"/>
+
         <Button
             android:id="@+id/button_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DELETE"
-            android:layout_below="@id/text_password"/>
+            android:layout_below="@id/text_result"/>
 
         <Button
             android:id="@+id/button_clear"
